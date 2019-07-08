@@ -1,0 +1,11 @@
+@mixin screenMed() {
+  @media (min-width: 800px) {
+    @content;
+  }
+}
+
+@mixin screenLarge() {
+  @media (min-width: 800px) {
+    @content;
+  }
+}

@@ -1,0 +1,23 @@
+.logo--nav {
+  display: none;
+  @include screenLarge() {
+    display: block;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.nav-separator {
+  width: 1rem;
+  margin: 5px 0;
+  border: 1px solid rgba($dark_grey, 0.5);
+}
+
+.nav-menu__item {
+  padding: 5px 0;
+}
+
+.nav-menu__link {
+  color: $dark_grey;
+  text-decoration: none;
+}
