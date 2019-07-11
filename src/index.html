@@ -13,53 +13,179 @@
   </head>
   <body>
     <!-- Sidebar / Nav -->
-    <nav class="nav nav--is-hidden">
+    <section
+      class="layout-overlay layout-overlay--is-hidden"
+      data-js="overlay"
+    ></section>
+    <nav class="layout-nav layout-nav--is-hidden" data-js="nav">
       <section>
-        <div class="logo logo--nav">
-          <svg
-            width="233"
-            height="43"
-            viewBox="0 0 233 43"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g stroke="none" stroke-width="1" fill-rule="evenodd">
-              <path
-                d="M59 16c1.6-2.1 2.3-4.2 2.3-6.5 0-2.9-1.1-5.2-3.1-6.8C56.1 1 53.1.2 49.1.2H38.4c-1.2 0-1.8.6-1.9 1.8-2.6 25.7-3.9 38.6-3.9 38.7 0 1 .5 1.4 1.6 1.4h10.3c5.1 0 9.2-1.1 12.2-3.3 2.9-2.2 4.5-5.5 4.5-9.9 0-1.3-.3-2.5-.8-3.6s-1.1-1.9-1.8-2.5c-.7-.6-1.5-1.2-2.5-1.7s-1.8-.8-2.3-1l.1-.3c1.9-.5 3.6-1.8 5.1-3.8zm-3.2 12.9c0 2.6-.8 4.7-2.4 6.3-1.6 1.5-3.8 2.3-6.5 2.3H38l1.5-14.7h7.8c2.8 0 4.9.6 6.3 1.6 1.4 1.1 2.2 2.6 2.2 4.5zm-2.3-13c-1.7 1.5-3.8 2.3-6.4 2.3v.1h-7l1.3-13.6h6.8c5.2 0 7.8 1.8 7.8 5.5 0 2.2-.8 4.2-2.5 5.7zm19.5 22l-1.6.3c-.5 0-.9-.1-1.3-.4-.3-.1-.4-.3-.6-.7-.1-.3-.2-1-.2-1.9 0-.9.8-10.1 3.3-33.8 0-.8-.7-1.3-2.2-1.3h-.3c-1.5 0-2.3.4-2.4 1.3l-.6 5.9c-1.9 17.7-2.8 27.4-2.8 29.2 0 3.9 1.8 5.9 5.3 5.9.7 0 1.4-.1 2.2-.5.8-.3 1.2-.9 1.3-1.7.1-.8.2-1.4.2-1.8 0-.4-.1-.5-.3-.5zm30 0l-1.6.3c-.5 0-1-.1-1.4-.5-.2-.1-.4-.3-.5-.7-.1-.3-.2-1-.2-1.9 0-.9.8-8.7 2.3-23.3 0-.8-.7-1.3-2.2-1.3h-.3c-1.5 0-2.3.4-2.4 1.3l-1.6 15.9c-1.1 3.7-2.5 6.3-4.3 7.9-1.7 1.5-3.4 2.3-5 2.3-3 0-4.5-1.5-4.5-4.6 0-.5.7-7.7 2.1-21.5 0-.8-.8-1.3-2.2-1.3H81c-1.5 0-2.3.4-2.4 1.3l-2.2 22.7c0 5.2 2.6 7.8 7.7 7.8 4.1 0 7.5-2.1 10.3-6.5v.6c0 3.9 1.8 5.9 5.3 5.9.7 0 1.4-.1 2.2-.5.8-.3 1.2-.9 1.3-1.7.1-.8.2-1.4.2-1.8 0-.3-.2-.4-.4-.4zm17.4-27.5c-5.4 0-9.4 1.8-12 5.5-2.6 3.7-4 8.4-4 14.2 0 8.3 4.4 12.4 13.2 12.4 1.8 0 3.8-.3 6-1 2.2-.6 3.4-1.6 3.6-2.8.2-1.1.3-1.9.3-2.5 0-.6-.1-.9-.4-.9-.1 0-.6.3-1.4.8-2.3 1.4-4.8 2.2-7.8 2-2.8 0-4.9-.6-6.3-1.9-1.4-1.3-2.2-3.5-2.2-6.6V29c1.4.3 3.1.5 5 .5 4.2 0 7.8-.8 10.8-2.3 1.6-.8 2.8-1.9 3.6-3.4.9-1.5 1.3-3.2 1.3-5.2 0-1.9-.8-3.8-2.4-5.5-1.6-1.9-4-2.7-7.3-2.7zm3.7 11.5c-.7.8-1.4 1.5-2.3 1.9-1.9.8-4.5 1.3-7.8 1.3h-4.1c.9-6.9 4.3-10.3 10.2-10.3 1.6 0 2.9.4 3.8 1.2.9.8 1.4 1.8 1.4 3-.1 1.1-.5 2.1-1.2 2.9zM163.3 0h-.4c-1.3 0-2.1.3-2.3 1l-14 31.9-1.1 3.2-.3-3.1-7.5-32c-.1-.6-.9-1-2.3-1h-.5c-1.8 0-2.6.4-2.6 1.2 0 .1 3.1 13.4 9.4 39.9.1.6.9 1 2.3 1h1.8c1.3 0 2.1-.3 2.4-1l17.4-39.4c.2-.4.3-.7.3-.9-.1-.4-1-.8-2.6-.8zm8.5 6.2h.7c1.4 0 2.2-.4 2.2-1.3l.4-3.5c0-.8-.7-1.3-2.2-1.3h-.7c-1.5 0-2.3.5-2.4 1.3l-.4 3.5c-.1.8.7 1.3 2.4 1.3zm3 31.7l-1.6.3c-.4 0-.8-.1-.9-.1-.3-.1-.4-.3-.7-.6-.3-.4-.4-1.1-.4-2.1s.8-8.8 2.3-23.4c0-.8-.8-1.3-2.2-1.3h-.3c-1.5 0-2.3.4-2.4 1.3 0 0-.4 3.7-1.2 11.3-.8 7.6-1.2 12.1-1.2 13.5 0 3.8 1.8 5.7 5.2 5.7.7 0 1.4-.1 2.2-.5.8-.3 1.2-.9 1.3-1.7.1-.8.2-1.4.2-1.8.1-.5 0-.6-.3-.6zm31-.1l-1.6.3c-.5 0-.9-.1-1.4-.3-.4-.2-.7-.9-.7-2.1l1.7-17.5c0-5.2-2.5-7.7-7.7-7.9-4 0-7.5 2-10.3 6.1.1-.3.1-.5.1-.6 0-3-.5-4.5-1.5-4.5-2.2 0-3.3.5-3.3 1.4l.1 2.1c0 1.9-.9 10.6-2.6 26.3 0 .8.7 1.2 2.2 1.2h.3c1.5 0 2.3-.4 2.4-1.3l1.7-16.5c1.1-3.5 2.5-5.9 4.3-7.4 1.7-1.5 3.4-2.2 5-2.2 3 0 4.5 1.5 4.5 4.6 0 .3-.3 3.1-.8 8.3-.6 5.2-.8 8.2-.8 8.9 0 3.9 1.8 5.9 5.3 5.9.7 0 1.4-.1 2.2-.5.8-.3 1.2-.9 1.3-1.7.1-.8.2-1.4.2-1.8-.2-.6-.3-.8-.6-.8zm11.4-8.5c4.2 0 7.8-.8 10.8-2.3 1.6-.8 2.8-1.9 3.6-3.4.9-1.5 1.3-3.2 1.3-5.2 0-1.9-.8-3.8-2.4-5.5-1.6-1.7-4-2.5-7.3-2.5-5.4 0-9.4 1.8-12 5.5-2.6 3.7-4 8.4-4 14.2 0 8.3 4.4 12.4 13.2 12.4 1.8 0 3.8-.3 6-1 2.2-.6 3.4-1.6 3.6-2.8.2-1.1.3-1.9.3-2.5 0-.6-.2-.9-.4-.9-.1 0-.6.3-1.4.8-2.3 1.4-4.8 2.2-7.8 2-2.8 0-4.9-.6-6.3-1.9-1.4-1.3-2.2-3.5-2.2-6.6V29c1.5.1 3.2.3 5 .3zm5.6-14.6c1.6 0 2.9.4 3.8 1.2.9.8 1.4 1.8 1.4 3s-.4 2.1-1.1 3c-.7.8-1.4 1.5-2.3 1.9-1.9.8-4.5 1.3-7.8 1.3h-4.1c.9-6.9 4.3-10.4 10.1-10.4z"
-                class="letters"
-                fill-rule="nonzero"
-              ></path>
-              <path
-                d="M5.6.1C4.2 2.9-1.2 14.4 1.1 25.5c1.9 9.2 13.5 14.8 19.3 17-1.1-2.4-2.3-4.7-3.4-7-.4-.8-.9-1.7-1.3-2.6-.3-.6-.7-1.3-1-2-3.1-5.9-7-13.3-5.1-20 .2-.7.8-1.2 1.6-1.2.5 0 1.1.3 1.4.6.3.4.4.9.3 1.4-.9 3.4.3 7.1 1.7 10.6s3.2 7 5 10.5c.4.9.9 1.8 1.4 2.6.3.6.7 1.3 1 1.9.7 1.6 1.5 3.2 2.3 4.8 2.1-4.1 6.5-13.7 4.4-23.6C26.1 7.5 9.3 1.3 5.6.1z"
-                class="leaf"
-              ></path>
-            </g>
-          </svg>
+        <div class="nav-header">
+          <div class="logo logo-nav">
+            <svg
+              width="233"
+              height="43"
+              viewBox="0 0 233 43"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g stroke="none" stroke-width="1" fill-rule="evenodd">
+                <path
+                  d="M59 16c1.6-2.1 2.3-4.2 2.3-6.5 0-2.9-1.1-5.2-3.1-6.8C56.1 1 53.1.2 49.1.2H38.4c-1.2 0-1.8.6-1.9 1.8-2.6 25.7-3.9 38.6-3.9 38.7 0 1 .5 1.4 1.6 1.4h10.3c5.1 0 9.2-1.1 12.2-3.3 2.9-2.2 4.5-5.5 4.5-9.9 0-1.3-.3-2.5-.8-3.6s-1.1-1.9-1.8-2.5c-.7-.6-1.5-1.2-2.5-1.7s-1.8-.8-2.3-1l.1-.3c1.9-.5 3.6-1.8 5.1-3.8zm-3.2 12.9c0 2.6-.8 4.7-2.4 6.3-1.6 1.5-3.8 2.3-6.5 2.3H38l1.5-14.7h7.8c2.8 0 4.9.6 6.3 1.6 1.4 1.1 2.2 2.6 2.2 4.5zm-2.3-13c-1.7 1.5-3.8 2.3-6.4 2.3v.1h-7l1.3-13.6h6.8c5.2 0 7.8 1.8 7.8 5.5 0 2.2-.8 4.2-2.5 5.7zm19.5 22l-1.6.3c-.5 0-.9-.1-1.3-.4-.3-.1-.4-.3-.6-.7-.1-.3-.2-1-.2-1.9 0-.9.8-10.1 3.3-33.8 0-.8-.7-1.3-2.2-1.3h-.3c-1.5 0-2.3.4-2.4 1.3l-.6 5.9c-1.9 17.7-2.8 27.4-2.8 29.2 0 3.9 1.8 5.9 5.3 5.9.7 0 1.4-.1 2.2-.5.8-.3 1.2-.9 1.3-1.7.1-.8.2-1.4.2-1.8 0-.4-.1-.5-.3-.5zm30 0l-1.6.3c-.5 0-1-.1-1.4-.5-.2-.1-.4-.3-.5-.7-.1-.3-.2-1-.2-1.9 0-.9.8-8.7 2.3-23.3 0-.8-.7-1.3-2.2-1.3h-.3c-1.5 0-2.3.4-2.4 1.3l-1.6 15.9c-1.1 3.7-2.5 6.3-4.3 7.9-1.7 1.5-3.4 2.3-5 2.3-3 0-4.5-1.5-4.5-4.6 0-.5.7-7.7 2.1-21.5 0-.8-.8-1.3-2.2-1.3H81c-1.5 0-2.3.4-2.4 1.3l-2.2 22.7c0 5.2 2.6 7.8 7.7 7.8 4.1 0 7.5-2.1 10.3-6.5v.6c0 3.9 1.8 5.9 5.3 5.9.7 0 1.4-.1 2.2-.5.8-.3 1.2-.9 1.3-1.7.1-.8.2-1.4.2-1.8 0-.3-.2-.4-.4-.4zm17.4-27.5c-5.4 0-9.4 1.8-12 5.5-2.6 3.7-4 8.4-4 14.2 0 8.3 4.4 12.4 13.2 12.4 1.8 0 3.8-.3 6-1 2.2-.6 3.4-1.6 3.6-2.8.2-1.1.3-1.9.3-2.5 0-.6-.1-.9-.4-.9-.1 0-.6.3-1.4.8-2.3 1.4-4.8 2.2-7.8 2-2.8 0-4.9-.6-6.3-1.9-1.4-1.3-2.2-3.5-2.2-6.6V29c1.4.3 3.1.5 5 .5 4.2 0 7.8-.8 10.8-2.3 1.6-.8 2.8-1.9 3.6-3.4.9-1.5 1.3-3.2 1.3-5.2 0-1.9-.8-3.8-2.4-5.5-1.6-1.9-4-2.7-7.3-2.7zm3.7 11.5c-.7.8-1.4 1.5-2.3 1.9-1.9.8-4.5 1.3-7.8 1.3h-4.1c.9-6.9 4.3-10.3 10.2-10.3 1.6 0 2.9.4 3.8 1.2.9.8 1.4 1.8 1.4 3-.1 1.1-.5 2.1-1.2 2.9zM163.3 0h-.4c-1.3 0-2.1.3-2.3 1l-14 31.9-1.1 3.2-.3-3.1-7.5-32c-.1-.6-.9-1-2.3-1h-.5c-1.8 0-2.6.4-2.6 1.2 0 .1 3.1 13.4 9.4 39.9.1.6.9 1 2.3 1h1.8c1.3 0 2.1-.3 2.4-1l17.4-39.4c.2-.4.3-.7.3-.9-.1-.4-1-.8-2.6-.8zm8.5 6.2h.7c1.4 0 2.2-.4 2.2-1.3l.4-3.5c0-.8-.7-1.3-2.2-1.3h-.7c-1.5 0-2.3.5-2.4 1.3l-.4 3.5c-.1.8.7 1.3 2.4 1.3zm3 31.7l-1.6.3c-.4 0-.8-.1-.9-.1-.3-.1-.4-.3-.7-.6-.3-.4-.4-1.1-.4-2.1s.8-8.8 2.3-23.4c0-.8-.8-1.3-2.2-1.3h-.3c-1.5 0-2.3.4-2.4 1.3 0 0-.4 3.7-1.2 11.3-.8 7.6-1.2 12.1-1.2 13.5 0 3.8 1.8 5.7 5.2 5.7.7 0 1.4-.1 2.2-.5.8-.3 1.2-.9 1.3-1.7.1-.8.2-1.4.2-1.8.1-.5 0-.6-.3-.6zm31-.1l-1.6.3c-.5 0-.9-.1-1.4-.3-.4-.2-.7-.9-.7-2.1l1.7-17.5c0-5.2-2.5-7.7-7.7-7.9-4 0-7.5 2-10.3 6.1.1-.3.1-.5.1-.6 0-3-.5-4.5-1.5-4.5-2.2 0-3.3.5-3.3 1.4l.1 2.1c0 1.9-.9 10.6-2.6 26.3 0 .8.7 1.2 2.2 1.2h.3c1.5 0 2.3-.4 2.4-1.3l1.7-16.5c1.1-3.5 2.5-5.9 4.3-7.4 1.7-1.5 3.4-2.2 5-2.2 3 0 4.5 1.5 4.5 4.6 0 .3-.3 3.1-.8 8.3-.6 5.2-.8 8.2-.8 8.9 0 3.9 1.8 5.9 5.3 5.9.7 0 1.4-.1 2.2-.5.8-.3 1.2-.9 1.3-1.7.1-.8.2-1.4.2-1.8-.2-.6-.3-.8-.6-.8zm11.4-8.5c4.2 0 7.8-.8 10.8-2.3 1.6-.8 2.8-1.9 3.6-3.4.9-1.5 1.3-3.2 1.3-5.2 0-1.9-.8-3.8-2.4-5.5-1.6-1.7-4-2.5-7.3-2.5-5.4 0-9.4 1.8-12 5.5-2.6 3.7-4 8.4-4 14.2 0 8.3 4.4 12.4 13.2 12.4 1.8 0 3.8-.3 6-1 2.2-.6 3.4-1.6 3.6-2.8.2-1.1.3-1.9.3-2.5 0-.6-.2-.9-.4-.9-.1 0-.6.3-1.4.8-2.3 1.4-4.8 2.2-7.8 2-2.8 0-4.9-.6-6.3-1.9-1.4-1.3-2.2-3.5-2.2-6.6V29c1.5.1 3.2.3 5 .3zm5.6-14.6c1.6 0 2.9.4 3.8 1.2.9.8 1.4 1.8 1.4 3s-.4 2.1-1.1 3c-.7.8-1.4 1.5-2.3 1.9-1.9.8-4.5 1.3-7.8 1.3h-4.1c.9-6.9 4.3-10.4 10.1-10.4z"
+                  class="letters"
+                  fill-rule="nonzero"
+                ></path>
+                <path
+                  d="M5.6.1C4.2 2.9-1.2 14.4 1.1 25.5c1.9 9.2 13.5 14.8 19.3 17-1.1-2.4-2.3-4.7-3.4-7-.4-.8-.9-1.7-1.3-2.6-.3-.6-.7-1.3-1-2-3.1-5.9-7-13.3-5.1-20 .2-.7.8-1.2 1.6-1.2.5 0 1.1.3 1.4.6.3.4.4.9.3 1.4-.9 3.4.3 7.1 1.7 10.6s3.2 7 5 10.5c.4.9.9 1.8 1.4 2.6.3.6.7 1.3 1 1.9.7 1.6 1.5 3.2 2.3 4.8 2.1-4.1 6.5-13.7 4.4-23.6C26.1 7.5 9.3 1.3 5.6.1z"
+                  class="leaf"
+                ></path>
+              </g>
+            </svg>
+          </div>
         </div>
         <ul class="nav-menu">
-          <li class="nav-menu__item">
-            <a href="#" class="nav-menu__link">Invoices</a>
+          <li class="nav-menu__item nav-menu__item--is-current">
+            <a href="#" class="nav-menu__link">
+              <div class="nav-menu__item-inner">
+                <div class="nav-menu__icon-box">
+                  <svg
+                    class="icon-menu"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M16 1H4C2.89999 1 2 1.9 2 3V17H4V3H16V1ZM15 5L21 11V21C21 22.1 20.1 23 19 23H7.98999C6.89001 23 6 22.1 6 21L6.01001 7C6.01001 5.9 6.89999 5 8 5H15ZM19.5 12H14V6.5L19.5 12Z"
+                    />
+                  </svg>
+                </div>
+                <span>Invoices</span>
+              </div>
+            </a>
           </li>
           <li class="nav-menu__item">
-            <a href="#" class="nav-menu__link">Flex Credit</a>
+            <a href="#" class="nav-menu__link">
+              <div class="nav-menu__item-inner">
+                <div class="nav-menu__icon-box">
+                  <svg
+                    class="icon-menu"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.65 6.35C16.2 4.9 14.21 4 12 4C7.58001 4 4.01001 7.58 4.01001 12C4.01001 16.42 7.58001 20 12 20C15.73 20 18.84 17.45 19.73 14H17.65C16.83 16.33 14.61 18 12 18C8.69001 18 6.00001 15.31 6.00001 12C6.00001 8.69 8.69001 6 12 6C13.66 6 15.14 6.69 16.22 7.78L13 11H20V4L17.65 6.35Z"
+                    />
+                  </svg>
+                </div>
+                <span class="nav-menu__link-text">Flex Credit</span>
+              </div>
+            </a>
           </li>
         </ul>
         <hr class="nav-separator" />
         <ul class="nav-menu">
           <li class="nav-menu__item">
-            <a href="#" class="nav-menu__link">Customers</a>
+            <a href="#" class="nav-menu__link">
+              <div class="nav-menu__item-inner">
+                <div class="nav-menu__icon-box">
+                  <svg
+                    class="icon-menu"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M10.99 8C10.99 9.65997 9.66003 11 8 11C6.33997 11 5 9.65997 5 8C5 6.34003 6.33997 5 8 5C9.66003 5 10.99 6.34003 10.99 8ZM18.99 8C18.99 9.65997 17.66 11 16 11C14.34 11 13 9.65997 13 8C13 6.34003 14.34 5 16 5C17.66 5 18.99 6.34003 18.99 8ZM8 13C5.67004 13 1 14.17 1 16.5V19H15V16.5C15 14.17 10.33 13 8 13ZM15.03 13.05C15.38 13.02 15.7101 13 16 13C18.3301 13 23 14.17 23 16.5V19H17V16.5C17 15.02 16.1901 13.89 15.03 13.05Z"
+                    />
+                  </svg>
+                </div>
+                <span>Customers</span>
+              </div>
+            </a>
           </li>
           <li class="nav-menu__item">
-            <a href="#" class="nav-menu__link">Transactions</a>
+            <a href="#" class="nav-menu__link">
+              <div class="nav-menu__item-inner">
+                <div class="nav-menu__icon-box">
+                  <svg
+                    class="icon-menu"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M5 6.98999L9 3L13 6.98999H10V14H8V6.98999H5ZM16 10V17.01H19L15 21L11 17.01H14V10H16Z"
+                    />
+                  </svg>
+                </div>
+                <span>Transactions</span>
+              </div>
+            </a>
           </li>
           <li class="nav-menu__item">
-            <a href="#" class="nav-menu__link">Documents</a>
+            <a href="#" class="nav-menu__link">
+              <div class="nav-menu__item-inner">
+                <div class="nav-menu__icon-box">
+                  <svg
+                    class="icon-menu"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M16 1H4C2.9 1 2 1.9 2 3V17H4V3H16V1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM8 21H19V7H8V21Z"
+                      fill-opacity="0.54"
+                    />
+                  </svg>
+                </div>
+                <span>Documents</span>
+              </div>
+            </a>
           </li>
           <li class="nav-menu__item">
-            <a href="#" class="nav-menu__link">Your Profile</a>
+            <a href="#" class="nav-menu__link">
+              <div class="nav-menu__item-inner">
+                <div class="nav-menu__icon-box">
+                  <svg
+                    class="icon-menu"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M16 8C16 10.21 14.21 12 12 12C9.79004 12 8 10.21 8 8C8 5.78998 9.79004 4 12 4C14.21 4 16 5.78998 16 8ZM4 18C4 15.34 9.33008 14 12 14C14.6699 14 20 15.34 20 18V20H4V18Z"
+                    />
+                  </svg>
+                </div>
+                <span>Your Profile</span>
+              </div>
+            </a>
           </li>
           <li class="nav-menu__item">
-            <a href="#" class="nav-menu__link">Help & Contact</a>
+            <a href="#" class="nav-menu__link">
+              <div class="nav-menu__item-inner">
+                <div class="nav-menu__icon-box">
+                  <svg
+                    class="icon-menu"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12 2C6.47998 2 2 6.48001 2 12C2 17.52 6.47998 22 12 22C17.52 22 22 17.52 22 12C22 6.48001 17.52 2 12 2ZM11 17V11H13V17H11ZM11 7V9H13V7H11Z"
+                    />
+                  </svg>
+                </div>
+                <span>Help & Contact</span>
+              </div>
+            </a>
           </li>
         </ul>
       </section>
@@ -67,17 +193,45 @@
         <hr class="nav-separator" />
         <ul class="nav-menu">
           <li class="nav-menu__item">
-            <a href="#" class="nav-menu__link">Logout</a>
+            <a href="#" class="nav-menu__link">
+              <div class="nav-menu__item-inner">
+                <div class="nav-menu__icon-box">
+                  <svg
+                    class="icon-menu"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M5 3H19C20.1 3 21 3.89999 21 5V19C21 20.1 20.1 21 19 21H5C3.89001 21 3 20.1 3 19V15H5V19H19V5H5V9H3V5C3 3.89999 3.89001 3 5 3ZM11.5 17L10.09 15.59L12.67 13H3V11H12.67L10.09 8.41L11.5 7L16.5 12L11.5 17Z"
+                    />
+                  </svg>
+                </div>
+                <span>Logout</span>
+              </div>
+            </a>
           </li>
         </ul>
       </section>
     </nav>
     <main class="main">
       <header class="header">
-        <!-- !!! Burger    -->
-        <div class="header__nav-toggle">🍔</div>
+        <button class="button-nav-toggle" data-js="nav-toggle">
+          <svg
+            class="icon-nav-toggle"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M3 8V6H21V8H3ZM3 13H21V11H3V13ZM3 18H21V16H3V18Z"
+            />
+          </svg>
+        </button>
         <!-- !!! Logo -->
-        <div class="logo logo--header">
+        <div class="logo-header">
           <svg
             width="233"
             height="43"
@@ -99,10 +253,119 @@
           </svg>
         </div>
         <!-- !!! Notification Icon -->
-        <span>🔔</span>
+        <svg
+          class="icon-notify"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M18 11V16L20 18V19H4V18L6 16V11C6 7.91998 7.62988 5.35999 10.5 4.67999V4C10.5 3.16998 11.1699 2.5 12 2.5C12.8301 2.5 13.5 3.16998 13.5 4V4.67999C16.3601 5.35999 18 7.92999 18 11ZM14 20C14 21.1 13.1001 22 12 22C10.8899 22 10 21.1 10 20H14Z"
+          />
+        </svg>
       </header>
       <!-- Main Content -->
-      <h1>Main Content</h1>
+      <section class="layout-invoice-overview">
+        <article class="available-credit">
+          <figure class="available-credit__text">
+            <span class="available-credit__available">$4,500,000</span>
+            <span class="available-credit__limit">of $5,000,000</span>
+          </figure>
+          <figcaption class="available-credit__caption">
+            Your available credit
+          </figcaption>
+          <progress class="available-credit__progress" max="100" value="90">
+            90%
+          </progress>
+        </article>
+        <article class="next-invoice">
+          <figure class="next-invoice__amount">
+            Next invoice amount of $4,321 is due in 3 days
+          </figure>
+          <a href="#" class="next-invoice__link">See Invoice now</a>
+        </article>
+      </section>
+      <section class="layout-invoice-nav">
+        <ul class="layout-invoice-nav__tab-menu tab-menu">
+          <li class="tab-menu__item">
+            <a href="#" class="tab-menu__link tab-menu__link--is-current"
+              >Invoices</a
+            >
+          </li>
+          <li class="tab-menu__item">
+            <a href="#" class="tab-menu__link">Advances</a>
+          </li>
+        </ul>
+        <div class="layout-invoice-nav__button-container">
+          <button
+            class="button-invoice-add"
+            data-js="invoice-add-button"
+          ></button>
+        </div>
+        <div class="layout-invoice-nav__search-container">
+          <form
+            class="search-form"
+            data-js="invoice-search-form"
+            autocomplete="off"
+          >
+            <label for="invoice-search-input" class="search-form__icon-box">
+              <svg
+                class="icon-search"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M14.71 14H15.5L20.49 19L19 20.49L14 15.5V14.71L13.73 14.43C12.59 15.41 11.11 16 9.5 16C5.90997 16 3 13.09 3 9.5C3 5.90997 5.90997 3 9.5 3C13.09 3 16 5.90997 16 9.5C16 11.11 15.41 12.59 14.43 13.73L14.71 14ZM5 9.5C5 11.99 7.01001 14 9.5 14C11.99 14 14 11.99 14 9.5C14 7.01001 11.99 5 9.5 5C7.01001 5 5 7.01001 5 9.5Z"
+                />
+              </svg>
+            </label>
+            <input
+              id="invoice-search-input"
+              class="search-form__input"
+              data-js="invoice-search-input"
+              type="text"
+              placeholder="Search your invoices"
+            />
+          </form>
+        </div>
+      </section>
+      <section class="layout-invoice-data">
+        <section class="layout-invoice-data__header data-header">
+          <h2 class="data-header__title">In Process</h2>
+          <div class="data-header__total">
+            <div>
+              Total advance balance
+              <span class="data-header__value">$14,396</span>
+            </div>
+          </div>
+        </section>
+        <section class="data-table">
+          <!-- head -->
+          <div class="data-table__head-item">Invoice</div>
+          <div class="data-table__head-item">Invoice #</div>
+          <div class="data-table__head-item">Invoice Date</div>
+          <div class="data-table__head-item">Due</div>
+          <div class="data-table__head-item">Amount</div>
+          <div class="data-table__head-item">Status</div>
+          <!-- row -->
+          <div class="data-table__row-item">Highland Technology</div>
+          <div class="data-table__row-item">DTS Solutions</div>
+          <div class="data-table__row-item">9/14/2017</div>
+          <div class="data-table__row-item">11/14/2017</div>
+          <div class="data-table__row-item">$182,257.53</div>
+          <div class="data-table__row-item">In review</div>
+          <!-- row -->
+          <div class="data-table__row-item">Highland Technology</div>
+          <div class="data-table__row-item">DTS Solutions</div>
+          <div class="data-table__row-item">9/14/2017</div>
+          <div class="data-table__row-item">11/14/2017</div>
+          <div class="data-table__row-item">$182,257.53</div>
+          <div class="data-table__row-item">In review</div>
+        </section>
+      </section>
     </main>
     <script src="js/app.js"></script>
   </body>

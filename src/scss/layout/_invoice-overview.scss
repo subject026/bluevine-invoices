@@ -1,0 +1,11 @@
+.layout-invoice-overview {
+  background-color: $light_grey;
+  @include basePaddingH();
+  @include basePaddingV();
+  @include screenMed() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(180deg, #ffffff 0%, #fbfbfb 100%);
+  }
+}

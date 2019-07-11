@@ -1,0 +1,36 @@
+.data-header__total {
+  display: none;
+  color: $med_grey;
+  font-weight: 600;
+  @include screenMed() {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+.data-header__value {
+  display: inline-block;
+  margin-left: 0.5rem;
+  color: $dark_grey;
+}
+
+// table
+
+.data-table {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  padding-top: 2rem;
+}
+
+.data-table__head-item {
+  padding: 0.5rem 0 0.5rem 1rem;
+  background-color: $light_grey;
+}
+
+.data-table__row-item {
+  padding: 0.5rem 0 0.5rem 1rem;
+  & + .data-table__row-item {
+    border-top: 1px solid $med_grey;
+  }
+}

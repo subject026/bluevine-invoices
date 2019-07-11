@@ -1,9 +1,25 @@
-.logo {
+%logo {
   height: 100%;
   display: flex;
   align-items: center;
   svg {
     width: 80px;
     fill: $light_grey;
+  }
+}
+
+.logo-header {
+  @extend %logo;
+  @include screenLarge() {
+    display: none;
+  }
+}
+
+.logo-nav {
+  @extend %logo;
+  display: none;
+  @include screenLarge() {
+    display: flex;
+    align-items: center;
   }
 }

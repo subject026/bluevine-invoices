@@ -1,11 +1,29 @@
 @mixin screenMed() {
-  @media (min-width: 800px) {
+  @media (min-width: 650px) {
     @content;
   }
 }
 
 @mixin screenLarge() {
-  @media (min-width: 800px) {
+  @media (min-width: 900px) {
     @content;
+  }
+}
+
+@mixin basePaddingH() {
+  padding-left: $base_margin_small;
+  padding-right: $base_margin_small;
+  @include screenMed() {
+    padding-left: $base_margin_med;
+    padding-right: $base_margin_med;
+  }
+}
+
+@mixin basePaddingV($factor: 1) {
+  padding-top: calc(#{$base_margin_small} * #{$factor});
+  padding-bottom: calc(#{$base_margin_small} * #{$factor});
+  @include screenMed() {
+    padding-top: calc(#{$base_margin_med} * #{$factor});
+    padding-bottom: calc(#{$base_margin_med} * #{$factor});
   }
 }

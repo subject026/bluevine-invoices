@@ -5,23 +5,11 @@
   align-items: center;
   background-color: $dark_blue;
   color: $white;
+  @include basePaddingH();
   @include screenLarge() {
     justify-content: flex-end;
     background-color: $white;
     border-bottom: 2px solid $light_grey;
     color: pink;
-  }
-}
-
-.header__nav-toggle {
-  z-index: 10;
-  @include screenLarge() {
-    display: none;
-  }
-}
-
-.logo--header {
-  @include screenLarge() {
-    display: none;
   }
 }

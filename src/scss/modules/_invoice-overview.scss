@@ -1,0 +1,82 @@
+.available-credit {
+  height: 100%;
+  padding-right: 2rem;
+}
+
+.available-credit__text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: $dark_grey;
+}
+
+.available-credit__available {
+  @include screenMed() {
+    font-size: 1.5rem;
+  }
+}
+
+.available-credit__limit {
+  @include screenMed() {
+    font-size: 1rem;
+    color: lighten($dark_grey, 10%);
+  }
+}
+
+.available-credit__caption {
+  color: $credit_caption_color;
+  font-weight: 600;
+  margin: 0.5rem 0 1rem;
+}
+
+.available-credit__progress {
+  appearance: none;
+  padding: 0;
+  border: none;
+  border-radius: 5px;
+  display: block;
+  color: $turquoise;
+  background-color: $med_grey;
+  width: 320px;
+  max-width: 100%;
+  height: 5px;
+}
+
+.available-credit__progress::-webkit-progress-bar {
+  background-color: $med_grey;
+  border-radius: 5px;
+}
+
+.available-credit__progress::-moz-progress-bar {
+  background-color: $turquoise;
+}
+
+.available-credit__progress::-webkit-progress-value {
+  background-color: $turquoise;
+  border-radius: 5px;
+}
+
+// next invoice amount
+
+.next-invoice {
+  display: none;
+  padding: 1rem;
+  background-color: $light_grey;
+  @include screenMed() {
+    display: block;
+  }
+}
+
+.next-invoice__amount {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: $dark_grey;
+}
+
+.next-invoice__link {
+  font-weight: 600;
+  text-decoration: none;
+  color: $turquoise;
+  &:hover {
+    color: saturate($turquoise, 10%);
+  }
+}

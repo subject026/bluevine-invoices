@@ -1,0 +1,6 @@
+body {
+  @include screenLarge() {
+    display: grid;
+    grid-template-columns: $nav_width auto;
+  }
+}

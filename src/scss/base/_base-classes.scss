@@ -1,0 +1,13 @@
+%icon-header {
+  height: $icon_header_width;
+  width: $icon_header_width;
+}
+
+%button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  outline: none;
+  &:hover {
+    cursor: pointer;
+  }
+}

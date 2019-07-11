@@ -1,0 +1,24 @@
+.button-nav-toggle {
+  @extend %button;
+  z-index: 3;
+  width: 24px;
+  height: 24px;
+  @include screenLarge() {
+    display: none;
+  }
+}
+
+.button-invoice-add {
+  @extend %button;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  border: 2px solid $strong_blue;
+  color: $strong_blue;
+  font-weight: 600;
+  transition: color $transition_time, background-color $transition_time;
+  &:hover {
+    color: white;
+    background-color: $strong_blue;
+  }
+}

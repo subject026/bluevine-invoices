@@ -1,10 +1,22 @@
 $white: #fff;
-// $white: #f4f5f8;
 $light_grey: #f4f5f8;
-$dark_grey: #b2bdcc;
+$med_grey: #b2bdcc;
+$dark_grey: #303030;
 $dark_blue: #1b3b71;
 $strong_blue: #407cf6;
 $turquoise: #2fd9c9;
 $orange: #fc6e50;
 
+$base_margin_small: 1rem;
+$base_margin_med: 2rem;
+
+// element colors
+$credit_caption_color: darken($med_grey, 20%);
+
+$nav_width: 220px;
 $header_height: 3rem;
+$icon_header_width: 24px;
+$icon_menu_width: 25px;
+
+$transition_time: 0.2s;
+$nav_transition: $transition_time cubic-bezier(0.98, 0.03, 0.2, 0.93);

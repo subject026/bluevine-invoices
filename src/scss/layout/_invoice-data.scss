@@ -1,0 +1,9 @@
+.layout-invoice-data {
+  @include basePaddingH();
+  @include basePaddingV(1.5);
+}
+
+.layout-invoice-data__header {
+  display: grid;
+  grid-template-columns: auto auto;
+}

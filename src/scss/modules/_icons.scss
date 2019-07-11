@@ -1,0 +1,21 @@
+.icon-notify {
+  @extend %icon-header;
+  fill: $med_grey;
+}
+
+.icon-nav-toggle {
+  @extend %icon-header;
+  fill: $light_grey;
+}
+
+.icon-menu {
+  height: $icon_menu_width;
+  width: $icon_menu_width;
+  fill: $med_grey;
+}
+
+.icon-search {
+  height: 1.6rem;
+  width: 1.6rem;
+  fill: darken($med_grey, 20%);
+}
