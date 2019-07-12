@@ -46,7 +46,7 @@ window.onload = () => {
 
   window.onresize = () => {
     // get window width
-    const matchNow = window.matchMedia("(min-width: 650px)").matches;
+    const matchNow = window.matchMedia("(min-width: 700px)").matches;
     if (windowIsMed !== matchNow)
       setInvoiceAddButtonText(invoiceAddButtonEl, matchNow);
     windowIsMed = matchNow;

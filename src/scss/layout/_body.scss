@@ -1,4 +1,5 @@
 body {
+  background-color: $light_grey;
   @include screenLarge() {
     display: grid;
     grid-template-columns: $nav_width auto;

@@ -19,3 +19,17 @@
   width: 1.6rem;
   fill: darken($med_grey, 20%);
 }
+
+.icon-table-sort {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: $strong_blue;
+  opacity: 0;
+  transition: opacity $nav_transition;
+}
+
+.icon-table-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: $med_grey;
+}

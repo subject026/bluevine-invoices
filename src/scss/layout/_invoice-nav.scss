@@ -1,9 +1,13 @@
 .layout-invoice-nav {
   @include basePaddingH();
-  border-bottom: 1px solid $light_grey;
   display: grid;
   grid-template-columns: auto 100px;
   grid-template-rows: 1fr 1fr;
+  border-bottom: 1px solid $light_grey;
+  background-color: $white;
+  @include screenSmall() {
+    box-shadow: $card_shadow;
+  }
   @include screenMed() {
     grid-template-columns: auto auto 135px;
     grid-template-rows: 1fr;

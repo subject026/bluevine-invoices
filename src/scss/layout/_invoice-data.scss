@@ -1,9 +1,20 @@
 .layout-invoice-data {
   @include basePaddingH();
   @include basePaddingV(1.5);
+  background-color: $white;
+  @include screenSmall() {
+    box-shadow: $card_shadow;
+  }
+}
+
+* + .layout-invoice-data {
+  @include screenSmall() {
+    margin-top: 10px;
+  }
 }
 
 .layout-invoice-data__header {
   display: grid;
   grid-template-columns: auto auto;
+  padding-bottom: $base_margin_small;
 }

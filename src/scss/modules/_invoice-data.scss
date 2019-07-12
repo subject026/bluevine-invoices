@@ -1,3 +1,6 @@
+//////////////////////////////////////////////////////////
+// invoice data header
+
 .data-header__total {
   display: none;
   color: $med_grey;
@@ -11,26 +14,141 @@
 
 .data-header__value {
   display: inline-block;
-  margin-left: 0.5rem;
+  margin-left: 10px;
   color: $dark_grey;
 }
 
-// table
+/////////////////////////////////////////////////////////
+// invoice data table
+
+// using a max-width media query for some rules as some values only need to be set
+// for small screen sizes, makes more sense than seting them again for larger screens
 
 .data-table {
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+%data-table-row {
   display: grid;
-  grid-template-columns: repeat(6, auto);
-  padding-top: 2rem;
+  grid-template-columns: auto 95px 20px;
+  grid-template-rows: auto auto;
+  @include screenMed() {
+    display: grid;
+    grid-template-columns: 1.3fr minmax(100px, 1fr) minmax(120px, 1fr) 1fr 0.8fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+
+.data-table__head {
+  @extend %data-table-row;
+  display: none;
+  @include screenMed() {
+    display: grid;
+    @include basePaddingV(0.5);
+    font-size: 0.8rem;
+    color: darken($med_grey, 20%);
+    background-color: $light_grey;
+  }
+}
+
+.data-table__row {
+  @extend %data-table-row;
+  @include screenSmall() {
+    grid-gap: 10px;
+  }
+  @include basePaddingV();
+  color: lighten($dark_grey, 15%);
+  & + .data-table__row {
+    border-top: 1px solid $light_grey;
+  }
+  &:last-child {
+    padding-bottom: 0;
+  }
 }
 
 .data-table__head-item {
-  padding: 0.5rem 0 0.5rem 1rem;
-  background-color: $light_grey;
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  transition: color $nav_transition;
+  &:hover {
+    cursor: pointer;
+    color: $dark_grey;
+    .icon-table-sort {
+      opacity: 1;
+    }
+  }
 }
 
 .data-table__row-item {
-  padding: 0.5rem 0 0.5rem 1rem;
-  & + .data-table__row-item {
-    border-top: 1px solid $med_grey;
+  @include screenMed() {
+    padding-left: 1rem;
+  }
+}
+
+.data-table__head-item--is-active {
+  color: $dark_grey;
+  .icon-table-sort {
+    opacity: 1;
+  }
+}
+
+.data-table__row-item--hide-small {
+  display: none;
+  @include screenMed() {
+    display: block;
+  }
+}
+
+// specific cells
+
+.data-table__row-item-invoice {
+  @include screenSmall() {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    font-size: $data_card_font_size;
+  }
+}
+
+.data-table__row-item-invoice-date {
+  @include screenSmall() {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    color: $med_grey;
+    font-size: $data_card_font_size;
+  }
+}
+
+.data-table__row-item-amount {
+  @include screenSmall() {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: flex-end;
+    font-size: $data_card_font_size;
+    color: $light_blue;
+  }
+}
+
+.data-table__row-item-status {
+  @include screenSmall() {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: flex-end;
+    color: $med_grey;
+    font-size: $data_card_font_size;
+  }
+}
+
+.data-table__row-item-arrow-box {
+  display: none;
+  @include screenSmall() {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 }
